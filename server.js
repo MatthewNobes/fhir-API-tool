@@ -3,6 +3,7 @@ import cors from "cors";
 import patientsRouter from "./routes/patientsRoute.js";
 import medicationRouter from "./routes/medicationRoute.js";
 import appointmentsRouter from "./routes/appointmentsRoute.js";
+import immunisationsRouter from "./routes/immunisationsRoute.js";
 
 const app = express();
 
@@ -18,3 +19,4 @@ app.listen(port, function () {
 app.use("/patients", patientsRouter);
 app.use("/medication", medicationRouter);
 app.use("/appointments", appointmentsRouter);
+app.use("/immunisations", immunisationsRouter);
