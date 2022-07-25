@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import patientsRouter from "./routes/patientsRoute.js";
+import medicationRouter from "./routes/medicationRoute.js";
 
 const app = express();
 
@@ -14,3 +15,4 @@ app.listen(port, function () {
 });
 
 app.use("/patients", patientsRouter);
+app.use("/medication", medicationRouter);
