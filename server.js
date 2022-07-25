@@ -1,13 +1,15 @@
 import express from "express";
 import cors from "cors";
-import patientsRouter from "./routes/patientsRoute.js";
-import medicationRouter from "./routes/medicationRoute.js";
-import appointmentsRouter from "./routes/appointmentsRoute.js";
-import immunisationsRouter from "./routes/immunisationsRoute.js";
-import conditionsRouter from "./routes/conditionsRoute.js";
-import medicationAdministrationsRouter from "./routes/medicationAdministrationsRoute.js";
-import diagnosticReportsRouter from "./routes/diagnosticReportsRoute.js";
-import specimensRouter from "./routes/specimensRoute.js";
+import {
+  patientsRouter,
+  medicationRouter,
+  appointmentsRouter,
+  immunisationsRouter,
+  conditionsRouter,
+  medicationAdministrationsRouter,
+  diagnosticReportsRouter,
+  specimensRouter,
+} from "./routes/index.js";
 
 const app = express();
 
