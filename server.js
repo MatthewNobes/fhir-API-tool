@@ -7,6 +7,7 @@ import immunisationsRouter from "./routes/immunisationsRoute.js";
 import conditionsRouter from "./routes/conditionsRoute.js";
 import medicationAdministrationsRouter from "./routes/medicationAdministrationsRoute.js";
 import diagnosticReportsRouter from "./routes/diagnosticReportsRoute.js";
+import specimensRouter from "./routes/specimensRoute.js";
 
 const app = express();
 
@@ -26,3 +27,4 @@ app.use("/immunisations", immunisationsRouter);
 app.use("/conditions", conditionsRouter);
 app.use("/medicationAdministrations", medicationAdministrationsRouter);
 app.use("/diagnosticReports", diagnosticReportsRouter);
+app.use("/specimens", specimensRouter);
