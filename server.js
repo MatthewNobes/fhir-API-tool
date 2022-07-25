@@ -5,6 +5,7 @@ import medicationRouter from "./routes/medicationRoute.js";
 import appointmentsRouter from "./routes/appointmentsRoute.js";
 import immunisationsRouter from "./routes/immunisationsRoute.js";
 import conditionsRouter from "./routes/conditionsRoute.js";
+import medicationAdministrationsRouter from "./routes/medicationAdministrationsRoute.js";
 
 const app = express();
 
@@ -22,3 +23,4 @@ app.use("/medication", medicationRouter);
 app.use("/appointments", appointmentsRouter);
 app.use("/immunisations", immunisationsRouter);
 app.use("/conditions", conditionsRouter);
+app.use("/medicationAdministrations", medicationAdministrationsRouter);
