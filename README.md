@@ -11,3 +11,17 @@ To set this file up, you need to create a .env file with the following parameter
 - ID_TOKEN
 - API_URL
 - X_API_KEY
+
+Once created, you need to install the necessary NPM packages using either of the following commands:
+
+```bash
+npm i
+
+npm install
+```
+
+When these packages have been installed, you can start the application using this command:
+
+```bash
+npm start
+```
