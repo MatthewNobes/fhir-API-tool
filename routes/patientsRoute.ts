@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import addPatient from "../library/addPatient.json";
-import { fhirAPIQuery } from "../utils/fhirAPIQuery.js";
+import { fhirAPIQuery } from "../utils/fhirAPIQuery";
 
 const patientsRouter = express.Router();
 
@@ -9,7 +9,7 @@ patientsRouter.get("/allPatients", (req, res, next) => {
   const request = "/Patient";
   const requestType = "GET";
 
-  fhirAPIQuery(request, requestType, res);
+  fhirAPIQuery(request, requestType, res, '');
 });
 
 patientsRouter.get("/paitent/:searchName", (req, res, next) => {
@@ -18,7 +18,7 @@ patientsRouter.get("/paitent/:searchName", (req, res, next) => {
 
   const requestType = "GET";
 
-  fhirAPIQuery(request, requestType, res);
+  fhirAPIQuery(request, requestType, res, '');
 });
 
 patientsRouter.get("/all_data/:searchID", (req, res, next) => {
@@ -27,7 +27,7 @@ patientsRouter.get("/all_data/:searchID", (req, res, next) => {
 
   const requestType = "GET";
 
-  fhirAPIQuery(request, requestType, res);
+  fhirAPIQuery(request, requestType, res, '');
 });
 
 patientsRouter.get("/add-patient", (req, res) => {

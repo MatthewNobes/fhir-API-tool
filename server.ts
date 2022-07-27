@@ -11,7 +11,7 @@ import {
   specimensRouter,
   familyHistoryRouter,
   observationsRouter,
-} from "./routes/index.js";
+} from "./routes/index";
 
 const app = express();
 

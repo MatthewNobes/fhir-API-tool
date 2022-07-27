@@ -1,6 +1,6 @@
 import "dotenv/config";
 import express from "express";
-import { fhirAPIQuery } from "../utils/fhirAPIQuery.js";
+import { fhirAPIQuery } from "../utils/fhirAPIQuery";
 
 const medicationAdministrationsRouter = express.Router();
 
@@ -8,7 +8,7 @@ medicationAdministrationsRouter.get("/", (req, res, next) => {
   const request = "/MedicationAdministration";
   const requestType = "GET";
 
-  fhirAPIQuery(request, requestType, res);
+  fhirAPIQuery(request, requestType, res, '');
 });
 
 medicationAdministrationsRouter.get("/:searchID", (req, res, next) => {
@@ -17,7 +17,7 @@ medicationAdministrationsRouter.get("/:searchID", (req, res, next) => {
 
   const requestType = "GET";
 
-  fhirAPIQuery(request, requestType, res);
+  fhirAPIQuery(request, requestType, res, '');
 });
 
 export default medicationAdministrationsRouter;
