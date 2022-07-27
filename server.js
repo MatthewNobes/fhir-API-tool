@@ -9,6 +9,7 @@ import {
   medicationAdministrationsRouter,
   diagnosticReportsRouter,
   specimensRouter,
+  familyHistoryRouter,
 } from "./routes/index.js";
 
 const app = express();
@@ -30,3 +31,4 @@ app.use("/conditions", conditionsRouter);
 app.use("/medicationAdministrations", medicationAdministrationsRouter);
 app.use("/diagnosticReports", diagnosticReportsRouter);
 app.use("/specimens", specimensRouter);
+app.use("/familyHistory", familyHistoryRouter);
