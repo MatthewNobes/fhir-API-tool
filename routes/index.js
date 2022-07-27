@@ -7,6 +7,7 @@ import medicationRouter from "./medicationRoute.js";
 import patientsRouter from "./patientsRoute.js";
 import specimensRouter from "./specimensRoute.js";
 import familyHistoryRouter from "./familyHistoryRoute.js";
+import observationsRouter from "./observationsRoute.js";
 
 export {
   appointmentsRouter,
@@ -18,4 +19,5 @@ export {
   patientsRouter,
   specimensRouter,
   familyHistoryRouter,
+  observationsRouter,
 };
