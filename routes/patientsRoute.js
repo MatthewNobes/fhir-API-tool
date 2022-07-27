@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import fetch from "node-fetch";
+import addPatient from "../library/addPatient.json";
 
 const patientsRouter = express.Router();
 
@@ -69,6 +70,7 @@ patientsRouter.get("/all_data/:searchID", (req, res, next) => {
 });
 
 patientsRouter.get("/add-patient", (req, res) => {
+  //Not working
   const request = "/Patient";
   const requestType = "POST";
 
@@ -77,27 +79,7 @@ patientsRouter.get("/add-patient", (req, res) => {
     Authorization: "Bearer " + process.env.ID_TOKEN,
   };
 
-  // prettier-ignore
-  const data = JSON.stringify({
-    resourceType: "Patient",
-    text: {
-      status: "generated",
-      div: "<div xmlns=\'http://www.w3.org/1999/xhtml\'><p></p></div>",
-    },
-    active: true,
-    name: [
-      {
-        family: "Person",
-        given: ["Test"],
-      },
-    ],
-    gender: "male",
-    birthDate: "1950-02-20",
-    managingOrganization: {
-      reference: "Organization/2.16.840.1.113883.19.5",
-      display: "Good Health Clinic",
-    },
-  });
+  let data = JSON.stringify(addPatient);
 
   const requestOptions = {
     method: requestType,
